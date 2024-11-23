@@ -1,0 +1,954 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+em{
+    color: yellow;
+}
+
+.display-none{
+    display: none;
+}
+
+.display-ON {
+    display: block;
+}
+.loader{
+    width:20%;
+    justify-content: center;
+    margin: 20px auto;
+    margin-top:-10px ;
+    display: flex;
+    
+
+}
+
+.box{
+    animation-name: loader;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: .5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    display: none;
+}
+.loader .box{
+    padding: 10px;
+    margin:5px;
+    width: fit-content;
+    background-color:aqua;
+}
+
+.loader .box-1{
+    background-color: aqua;
+    border: 3px solid rgb(33, 1, 1)
+}
+.loader .box-2{
+  
+    background-color: aqua;
+   
+}
+.loader .box-3{
+
+    background-color: aqua;
+   
+}
+.loader .box-4{
+    background-color: rgb(1, 1, 33);
+   
+}
+.loader .box-5{
+    background-color: rgb(1, 1, 33);
+   
+}
+.loader .box-6{
+    background-color: rgb(1, 1, 33);
+}
+@keyframes loader {
+    from{
+        transition-duration: .5s;
+        transition-delay: .5s;
+        background-color: rgb(1, 1, 33);
+        border: 3px solid aqua;
+    }
+   to {
+        transition-duration: .5s;
+        transition-delay: .5s;
+        background-color:aqua;
+        border: 3px solid aqua;
+    }
+}
+
+footer{
+    margin: 20px;
+    border-top: 1px solid aqua;
+}
+ul{
+    display: flex;
+    justify-content: center;
+}
+footer ul li{
+    margin: 10px 10px 0px 0px;
+    font-weight: bold;
+    letter-spacing: .5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(18px,1vw,20px);
+    color: white;
+    list-style: none;
+}
+footer ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+.warning-Information-for-empty-tab{
+    text-align: center;
+    font-size: clamp(15px,2vw,40px);
+    letter-spacing: .9px;
+    color: white;
+    font-weight: 500;
+    margin-top: -2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 10px;
+}
+@media all and (max-width:397px)
+{
+   
+body{
+    background-color: rgb(1, 1, 33);
+    overflow-x: hidden;
+    width: 100%;
+}
+header{
+    border-bottom: 5px solid aqua;
+    margin-right: 15px;
+    margin-left: 15px;
+
+}
+
+ header p{
+        padding: .5em;
+        font-size: 25px;
+        text-align: center;
+        color: aqua;
+        font-weight: bold;
+        letter-spacing: 2px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 24px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 9px;
+}
+.second-line-text{
+margin-top: -20px;
+}
+
+
+label{
+    padding: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+input {
+margin: 5px;
+}
+ 
+input[type='text']{
+    width: 65%;
+    outline: none;
+    padding: 10px;
+    letter-spacing: .5px;
+    border: 4px aqua solid;
+}
+input[type='text']::placeholder{
+    letter-spacing: .5px;
+}
+input[type='button']{
+    width: 24%;
+    background-color: aqua;
+    color: black;
+    font-weight: bold;
+    border: 4px aqua solid;
+    cursor: pointer;
+    outline: none;
+    font-size: 15px;
+    letter-spacing: .5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+input[type='button']:hover{
+background-color:rgb(1, 1, 33) ;
+color: whitesmoke;
+border: 4px aqua solid;
+}
+
+
+
+.Not-Found-Information{
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: .9px;
+    color: aqua;
+    margin-top: -25px;
+    margin-bottom: 10px;
+} 
+  
+.Most-watched-movies{
+    margin-top: 5%;
+}
+
+h2{
+    text-align: left;
+    margin-bottom: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.Searched-Movie img{
+    width: 70%;
+    background-color: green;
+    margin-top: 5%;
+}
+
+table{
+    justify-content: center;
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-bottom: 1px aqua solid;
+    border-left: 1px aqua solid;
+    border-right: 1px aqua solid;
+}
+table thead th{
+    font-size: 13px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: aqua;
+    color:black;
+    padding: 8px;
+    text-align: center;
+}
+
+table thead tr{
+    text-align: center;
+    padding: 10px;
+}
+table thead th:first-child{
+    width: 40%;
+    text-align: center;
+}
+table tbody td{
+    border-bottom: 1px aqua solid;
+    border-left: 1px aqua solid;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+table tbody td{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+}
+table tbody td{
+    text-align: center;
+}
+
+table tbody td button{
+    padding: 4px;
+     margin: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: .5px;
+    cursor: pointer;
+    border: none;
+    background-color: aqua;
+}
+
+table tbody td button:active{
+    background-color: rgb(1, 1, 33);
+    color: aqua;
+} 
+
+ .Most-watched-movies{
+    color: white;
+    margin-left: 5px;
+ }
+ .list-of-movies{
+    margin: 15px;
+    width: inherit;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns:repeat(2,1fr) ;
+ }
+ .list-of-movies img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+ .movie-title{
+    display: none;
+ }
+ .list-of-movies {
+    grid-row-start: 1;
+    grid-row-end: 3;
+ }
+ .list-of-movies p{
+    margin-top: -1.5em;
+    text-align: center;
+ }
+ .list-of-movies a p{
+    color: white;
+    background-color: black;
+ }
+ 
+ .Movie-3{
+    grid-column-start: 1;
+    grid-column-end: 3;
+ }
+ .Movie-4{
+  grid-row-start: 1;
+  grid-row-end: 3;
+ }
+
+ article{
+    color:white
+ }
+ article h3{
+    text-align: center;
+    font-size: 30px;
+    border-bottom:4px aqua solid ;
+    margin: 16px 15px 10px 15px ;
+    padding-bottom: 10px;
+
+ }
+ article p{
+    margin: 15px;
+    font-size: 18px;
+    letter-spacing: .7px;
+    text-align: center;
+ }
+}
+
+
+@media all and (min-width:399px) and (max-width:700px){
+    body{
+        background-color: rgb(1, 1, 33);
+        overflow-x: hidden;
+        width: 100%;
+    }
+    header{
+        border-bottom: 5px solid aqua;
+        margin-right: 15px;
+        margin-left: 15px;
+    
+    }
+    header p{
+        padding: .5em;
+        font-size: 40px;
+        text-align: center;
+        color: aqua;
+        font-weight: bold;
+        letter-spacing: 2px;
+}
+
+
+h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: clamp(20px,6vw,90px);
+    color:white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 9px;
+}
+
+.second-line-text{
+margin-top: -20px;
+}
+
+label{
+    padding: 5px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+input {
+margin: 5px;
+}
+ 
+input[type='text']{
+    width: 65%;
+    height: 50%;
+    outline: none;
+    font-size: clamp(15px,1vw,60px);
+    padding: 15px;
+    letter-spacing: .5px;
+    border: 4px aqua solid;
+}
+input[type='text']::placeholder{
+    letter-spacing: .5px;
+}
+input[type='button']{
+    width: 25%;
+    background-color: aqua;
+    color: black;
+    font-weight: bold;
+    border: 4px aqua solid;
+    cursor: pointer;
+    outline: none;
+    font-size: clamp(20px,1.5vw,60px);
+    letter-spacing: .5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+input[type='button']:hover{
+background-color:rgb(1, 1, 33) ;
+color: whitesmoke;
+border: 4px aqua solid;
+}
+
+.Searched-Movie img{
+    width: 90%;
+    height: 45%;
+    background-color: green;
+    margin-top: 5%;
+}
+.Not-Found-Information{
+    text-align: center;
+    font-size: clamp(20px,1vw,60px);
+    letter-spacing: .9px;
+    color: aqua;
+    margin-top: 3%;
+    margin-bottom: 7%;
+} 
+
+
+table{
+    justify-content: center;
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-bottom: 1px aqua solid;
+    border-left: 1px aqua solid;
+    border-right: 1px aqua solid;
+}
+table thead th{
+    font-size: clamp(15px,1vw,60px);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: aqua;
+    color:black;
+    padding: 10px;
+    text-align: center;
+}
+
+table thead tr{
+    text-align: center;
+    padding: 10px;
+
+}
+
+
+table thead th:first-child{
+    width: 40%;
+    text-align: center;
+}
+table tbody td{
+    border-bottom: 1px aqua solid;
+    border-left: 1px aqua solid;
+    color: white;
+    text-align: center;
+    font-size: clamp(15px,1vw,50px);
+}
+table tbody td{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(15px,1vw,50px);
+}
+table tbody td{
+    text-align: center;
+}
+
+table tbody td button{
+    padding: 10px;
+     margin: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(15px,1vw,60px);
+    font-weight: bold;
+    letter-spacing: .5px;
+    cursor: pointer;
+    border: none;
+    background-color: aqua;
+}
+
+table tbody td button:active{
+    background-color: rgb(1, 1, 33);
+    color: aqua;
+} 
+
+.Most-watched-movies{
+    color: white;
+    margin-left: 5px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: clamp(20px,4.5vw,60px);
+ }
+ .list-of-movies{
+    margin: 15px;
+    width: inherit;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns:repeat(2,1fr) ;
+ }
+ .list-of-movies img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+ .list-of-movies {
+    grid-row-start: 1;
+    grid-row-end: 3;
+ }
+ .movie-title{
+    display: none;
+ }
+ .list-of-movies p{
+    margin-top: -1.5em;
+    text-align: center;
+ }
+ .list-of-movies a p{
+    color: white;
+    background-color: black;
+    font-size: 2em;
+ }
+ .Movie-3{
+    grid-column-start: 1;
+    grid-column-end: 3;
+ }
+ .Movie-4{
+  grid-row-start: 1;
+  grid-row-end: 3;
+ }
+
+article {
+    font-size: clamp(20px,2vw,40px);
+    color: white;
+} 
+article h3{
+    font-size: clamp(20px,6.5vw,60px);
+    text-align: center;
+    border-bottom: 3px solid aqua;
+    margin: 20px 10px 10px 10px ;
+}
+article p{
+    font-size: clamp(19px,2vw,30px);
+    text-align: center;
+}
+}
+
+@media all and (min-width:700px) and (max-width:924px){
+    body{
+        background-color:rgb(1, 1, 33);
+    }
+
+    header{
+        border-bottom: 5px solid aqua;
+        margin-right: 15px;
+        margin-left: 15px;
+    
+    }
+    header p{
+        padding: .5em;
+        font-size: 40px;
+        text-align: center;
+        color: aqua;
+        font-weight: bold;
+        letter-spacing: 2px;
+}
+
+
+h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 50px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 9px;
+}
+
+.second-line-text{
+margin-top: -20px;
+}
+  
+    label{
+        padding: 5px;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+    }
+    input {
+    margin: 5px;
+    }
+     
+    input[type='text']{
+        width: 65%;
+        height: 50%;
+        outline: none;
+        font-size: clamp(20px,2vw,60px);
+        padding: 15px;
+        letter-spacing: .5px;
+        border: 4px aqua solid;
+    }
+    input[type='text']::placeholder{
+        letter-spacing: .5px;
+    }
+    input[type='button']{
+        width: 25%;
+        background-color: aqua;
+        color: black;
+        font-weight: bold;
+        border: 4px aqua solid;
+        cursor: pointer;
+        outline: none;
+        font-size: clamp(20px,4vw,60px);
+        letter-spacing: .5px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    }
+    input[type='button']:hover{
+    background-color:rgb(1, 1, 33) ;
+    color: whitesmoke;
+    border: 4px aqua solid;
+    }
+    
+    .Searched-Movie img{
+        width: 90%;
+        height: 45%;
+        background-color: green;
+        margin-top: 5%;
+    }
+    .Not-Found-Information{
+        text-align: center;
+        font-size: clamp(20px,4vw,50px);
+        letter-spacing: .9px;
+        color: aqua;
+        margin-top: 3%;
+        margin-bottom: 7%;
+    } 
+    
+    
+table{
+    justify-content: center;
+    width: 95%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-bottom: 1px aqua solid;
+    border-left: 1px aqua solid;
+    border-right: 1px aqua solid;
+}
+table thead th{
+    font-size: clamp(20px,2vw,60px);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: aqua;
+    color:black;
+    padding: 10px;
+    text-align: center;
+}
+
+table thead tr{
+    text-align: center;
+    padding: 10px;
+
+}
+
+
+table thead th:first-child{
+    width: 40%;
+    text-align: center;
+}
+table tbody td{
+    border-bottom: 1px aqua solid;
+    border-left: 1px aqua solid;
+    color: white;
+    text-align: center;
+    font-size: clamp(20px,3vw,60px);
+}
+table tbody td{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(20px,3.5vw,90px);
+}
+table tbody td{
+    text-align: center;
+}
+
+table tbody td button{
+    padding: 10px;
+     margin: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: .5px;
+    cursor: pointer;
+    border: none;
+    background-color: aqua;
+}
+
+table tbody td button:active{
+    background-color: rgb(1, 1, 33);
+    color: aqua;
+} 
+
+.Most-watched-movies{
+    color: white;
+    margin-left: 5px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: clamp(20px,4vw,60px);
+ }
+ .list-of-movies{
+    margin: 15px;
+    width: inherit;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns:repeat(2,1fr) ;
+ }
+ .list-of-movies img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+ .list-of-movies {
+    grid-row-start: 1;
+    grid-row-end: 3;
+ }
+ .list-of-movies p{
+    margin-top: -1.5em;
+    text-align: center;
+ }
+
+ .movie-title{
+    display: none;
+ }
+ .Movie-4{
+  grid-row-start: 1;
+  grid-row-end: 3;
+ }
+ .Movie-6{
+    grid-column-start:1 ;
+    grid-column-end: 3;
+ }
+ article {
+    font-size: clamp(20px,2vw,60px);
+    text-align: center;
+ }
+ article h3 {
+    text-align: center;
+    font-size: clamp(20px,5vw,60px);
+    color: white;
+    border-bottom: 4px solid aqua;
+    margin: 10px;
+    color: white;
+ }
+ article p{
+    color: white;
+ }
+}
+
+@media all and (min-width:924px){
+body{
+    background-color: rgb(1, 1, 33);
+}
+    header{
+        border-bottom: 2px solid aqua;
+        margin: 0px 15% 0px 15% ;
+    
+    }
+    header p{
+        padding: .5em;
+        font-size: 30px;
+        text-align: left;
+        color: aqua;
+        font-weight: bold;
+        letter-spacing: 2px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: clamp(20px,3.5vw,90px);
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 9px;
+}
+.second-line-text{
+    margin-top: -10px;
+}
+label{
+    padding: 5px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+input {
+margin: 5px;
+}
+ 
+input[type='text']{
+    width: 50%;
+    outline: none;
+    font-size: clamp(20px,1vw,60px);
+    padding: 10px;
+    letter-spacing: .5px;
+    border: 4px aqua solid;
+}
+input[type='text']::placeholder{
+    letter-spacing: .5px;
+}
+input[type='button']{
+    width: 25%;
+    background-color: aqua;
+    color: black;
+    font-weight: bold;
+    border: 4px aqua solid;
+    cursor: pointer;
+    outline: none;
+    font-size: clamp(20px,3.5vw,60px);
+    letter-spacing: .5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+input[type='button']:hover{
+background-color:rgb(1, 1, 33) ;
+color: whitesmoke;
+border: 4px aqua solid;
+}
+
+.Not-Found-Information{
+    text-align: center;
+    font-size: clamp(20px,3vw,50px);
+    letter-spacing: .9px;
+    color: aqua;
+    margin-top: -1%;
+    margin-bottom: 3%;
+} 
+    
+table{
+    justify-content: center;
+    width: 75%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-bottom: 1px aqua solid;
+    border-left: 1px aqua solid;
+    border-right: 1px aqua solid;
+}
+table thead th{
+    font-size: clamp(20px,2vw,60px);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: aqua;
+    color:black;
+    padding: 10px;
+    text-align: center;
+}
+
+table thead tr{
+    text-align: center;
+    padding: 10px;
+
+}
+table thead th:first-child{
+    width: 40%;
+    text-align: center;
+}
+table tbody td{
+    border-bottom: 1px aqua solid;
+    border-left: 1px aqua solid;
+    color: white;
+    text-align: center;
+    font-size: clamp(20px,3vw,60px);
+}
+table tbody td{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(20px,2.2vw,90px);
+}
+table tbody td{
+    text-align: center;
+}
+
+table tbody td button{
+    padding: 10px;
+     margin: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: clamp(20px,2.5vw,50px);
+    font-weight: bold;
+    letter-spacing: .5px;
+    cursor: pointer;
+    border: none;
+    background-color: aqua;
+}
+
+table tbody td button:active{
+    background-color: rgb(1, 1, 33);
+    color: aqua;
+} 
+
+.Most-watched-movies{
+    color: white;
+    margin-left: 5px;
+    margin-top: 1em;
+    margin-bottom: .2em;
+    font-size: clamp(20px,3vw,60px);
+ }
+.Searched-Movie img{
+    width: 55%;
+    height: 66%;
+    background-color: green;
+    margin-top: 2%;
+}
+.list-of-movies{
+    margin: 15px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-grow: 2;
+ }
+ .list-of-movies img{
+    width: 100%;
+    object-fit: cover;
+ }
+  .movie-title{
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    letter-spacing: .2px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+ a{
+    text-decoration: none;
+ }
+ .Movie-3,.Movie-4,.Movie-2,.Movie-5,.Movie-6{
+    margin-left: 10px;
+ }
+ article{
+    color: white;
+    margin-top: 20px;
+
+ }
+ article h3{
+    text-align: center;
+    font-size: clamp(20px,3.5vw,100px);
+    margin: 0px 3em 10px 3em;
+ }
+ article p{
+    font-size: clamp(20px,1.5vw,90px);
+    margin: 10px;
+    text-align: center;
+ }
+ 
+
+}
