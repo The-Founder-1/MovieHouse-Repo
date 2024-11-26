@@ -5,49 +5,88 @@ const Second_Input_Tab = document.getElementById('enterBtn')
 const warning_Information_for_empty_tab = document.querySelector('.warning-Information-for-empty-tab');
 const Not_Found_Information = document.querySelector('.Not-Found-Information');
 const Searched_Movie = document.querySelector('.Searched-Movie');
+const Table_Tag = document.getElementsByTagName('Table')[0]
+const loader_effect = document.getElementsByTagName('div')[0]
+const MovieName = First_Input_Tab.value;
 
-const link = document.location.href;
 
+const API = `https://dummyjson.com/users/${Math.floor(Math.random()* 30)+ 1}`;
+  
+const getInformation = async (Method,API) =>{
 
+  const  xhr =  new XMLHttpRequest()
 
-const DisplayOutWarningInfo =()=>{
-    setTimeout(()=>{
-        warning_Information_for_empty_tab.classList.remove('display-ON')
-        warning_Information_for_empty_tab.classList.add('display-none')
-    },2000)
-}
-const getInputValueWarning =()=>{
-    if(First_Input_Tab.value.length < 1){
-        warning_Information_for_empty_tab.classList.remove('display-none')
-        warning_Information_for_empty_tab.classList.add('display-ON')
-        DisplayOutWarningInfo()
-    }
-}
+    xhr.open(Method,API)
 
-const getCorrectValueInputed = () =>{
-    Searched_Movie.classList.remove('display-none')
-    Searched_Movie.classList.add('display-ON')
-    console.log(link)
-  }  
+    xhr.responseType = 'json'
 
-const getValuedInputValue =()=>{
-    if(First_Input_Tab.value.length > 1){
-      console.log('Hello world...')  
-      getCorrectValueInputed()   
-    }
-    }
+     xhr.onreadystatechange =()=>{
 
-const getWrongInputValue =()=>{
-        if(typeof First_Input_Tab.value !== 'string'){
-            Not_Found_Information.classList.remove('display-none')
-            Not_Found_Information.classList.add('display-ON')
+     if(xhr.status ===  204 || xhr.readyState === 1 && 2 ){
+loader_effect.style.display = 'block';
+console.log('loading...')
+     } 
+     if(typeof MovieName === 'string'){
+    if(xhr.readyState === 4 && xhr.status === 200 ){
+
+      loader_effect.classList.remove('display-ON')
+      loader_effect.classList.add('display-none')
+    
+      const UserData = xhr.response;
+      const FullName = UserData.firstName || UserData.lastName || UserData.maidenName;
+
+        let htmlTemplate = `
+        <thead>
+          <tr>
+          <th>
+             Movie Picture 
+          </th>
+          <th>Name of Movie</th>
+          <th>Download </th>
+          </tr>
+       </thead>
+        <tbody>
+           <tr>
+             <td>
+             <img src="${UserData.image}" alt="">
+            </td>
+           <td>
+             ${FullName}
+          </td>
+          <td>
+           <button><a href="MovieHouse_Download_Page.html">Download</a></button>
+         </td>
+          </tr>
+       </tbody>                                                                                                                                                                                                                    
+       `
+       document.getElementsByTagName('table')[0].innerHTML = htmlTemplate;
+        
+        }
+
+    if(xhr.status === 404){
+         Not_Found_Information.classList.remove('display-none')
+         Not_Found_Information.classList.add('display-ON') 
+     }
+     if(xhr.status === 504){
+      console.log('Server Problem')
+     }
+     } if(typeof MovieName !== 'string'){
+
+      Not_Found_Information.classList.remove('display-none')
+      Not_Found_Information.classList.add('display-ON') 
+    
+      setTimeout(()=>{
+        Not_Found_Information.classList.add('display-none')
+        Not_Found_Information.classList.remove('display-ON') 
+      },2000)
      }
     }
-
-
-Second_Input_Tab.addEventListener('click',()=>{
- getInputValueWarning();
-getValuedInputValue()
- getWrongInputValue()
+     xhr.send()
     
-})
+    }
+    getInformation('GET',API)
+
+
+    Second_Input_Tab.addEventListener('click',()=>{
+      getInformation('GET',API)
+    })

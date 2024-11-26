@@ -19,8 +19,7 @@ em{
     margin: 20px auto;
     margin-top:-10px ;
     display: flex;
-    
-
+    display: none;
 }
 
 .box{
@@ -31,7 +30,6 @@ em{
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
-    display: none;
 }
 .loader .box{
     padding: 10px;
@@ -111,6 +109,11 @@ footer ul li a{
     margin-top: -2em;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-bottom: 10px;
+}
+
+table tbody td a{
+    color: rgb(1, 1, 33);
+    text-decoration: none;
 }
 @media all and (max-width:397px)
 {
@@ -267,6 +270,10 @@ table tbody td button{
     cursor: pointer;
     border: none;
     background-color: aqua;
+}
+table tbody td a{
+    color: rgb(1, 1, 33);
+    text-decoration: none;
 }
 
 table tbody td button:active{
@@ -484,7 +491,10 @@ table tbody td button{
     border: none;
     background-color: aqua;
 }
-
+table tbody td a{
+    color: rgb(1, 1, 33);
+    text-decoration: none;
+}
 table tbody td button:active{
     background-color: rgb(1, 1, 33);
     color: aqua;
@@ -698,6 +708,11 @@ table tbody td button{
     background-color: aqua;
 }
 
+table tbody td a{
+    color: rgb(1, 1, 33);
+    text-decoration: none;
+}
+
 table tbody td button:active{
     background-color: rgb(1, 1, 33);
     color: aqua;
@@ -890,6 +905,10 @@ table tbody td button{
     cursor: pointer;
     border: none;
     background-color: aqua;
+}
+table tbody td a{
+    color: rgb(1, 1, 33);
+    text-decoration: none;
 }
 
 table tbody td button:active{
