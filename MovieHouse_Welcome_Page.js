@@ -11,12 +11,16 @@ const MovieName = First_Input_Tab.value;
 
 
 const API = `https://dummyjson.com/users/${Math.floor(Math.random()* 30)+ 1}`;
+const URL = `https://api.themoviedb.org/3/movie/157336?api_key=78ca8b749dc700ad76bafa2b68f8054f&append_to_response=MovieName`
+console.log(URL)
+// const APIKEY = process.env.APIKEY;
+// console.log(APIKEY)
   
 const getInformation = async (Method,API) =>{
-
   const  xhr =  new XMLHttpRequest()
 
-    xhr.open(Method,API)
+  xhr.open(Method,API)
+  try{
 
     xhr.responseType = 'json'
 
@@ -67,21 +71,26 @@ console.log('loading...')
          Not_Found_Information.classList.remove('display-none')
          Not_Found_Information.classList.add('display-ON') 
      }
-     if(xhr.status === 504){
-      console.log('Server Problem')
-     }
-     } if(typeof MovieName !== 'string'){
-
-      Not_Found_Information.classList.remove('display-none')
-      Not_Found_Information.classList.add('display-ON') 
     
-      setTimeout(()=>{
-        Not_Found_Information.classList.add('display-none')
-        Not_Found_Information.classList.remove('display-ON') 
-      },2000)
-     }
+     } 
     }
-     xhr.send()
+
+} catch(error){
+  if(xhr.status === 504){
+    console.log('Server Problem')
+   }
+   if(typeof MovieName !== 'string'){
+
+    Not_Found_Information.classList.remove('display-none')
+    Not_Found_Information.classList.add('display-ON') 
+  
+    setTimeout(()=>{
+      Not_Found_Information.classList.add('display-none')
+      Not_Found_Information.classList.remove('display-ON') 
+    },2000)
+   }
+}
+ xhr.send()
     
     }
     getInformation('GET',API)
