@@ -52,7 +52,7 @@ console.log('loading...')
         <tbody>
            <tr>
              <td>
-             <img src="${UserData.image}" alt="">
+             <img src="https://image.tmdb.org/t/p/w500/${UserData.image}" alt="">
             </td>
            <td>
              ${FullName}
